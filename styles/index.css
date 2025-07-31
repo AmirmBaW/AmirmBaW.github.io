@@ -1,0 +1,101 @@
+header{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    z-index: 100;
+    background-color: rgba(211, 47, 47, 0.5); /* semi-transparent red */
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border-radius: 8px;
+    align-items: center;
+}
+
+nav ul li {
+    font-weight: bold;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav ul li a {
+    color: white;
+    transition: color 0.2s;
+}
+
+
+.right-header{
+    flex: 1;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.middle-header{
+    flex: 2;
+    width: 0;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.left-header{
+    flex: 1;
+    flex-shrink: 0;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding-left: 20px;
+}
+
+.right-header img {
+    height: 50px;
+}
+
+.left-header img {
+    width: 32px;
+}
+
+.left-header a {
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    ul {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 8px;
+        align-items: center;
+        background-color: rgba(121, 121, 121, 0.432);
+     
+        li {
+            font-weight: bold;
+            padding: 20px 10px;
+        }
+    }
+}
+
+/* The hero image */
