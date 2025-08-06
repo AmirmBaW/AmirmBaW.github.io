@@ -23,7 +23,6 @@ function renderPosts(renderPosts) {
                     <span class="publish-date">${post.date}</span>
                 </div>
             </div>
-        
         `
 
         if (post.badge) {
@@ -33,7 +32,7 @@ function renderPosts(renderPosts) {
         html += "</div>"
     })
 
-    document.querySelector('.blog').innerHTML = html;
+    document.querySelector('.blog').innerHTML += html;
 }
 
 function searchProducts() {
