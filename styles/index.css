@@ -5,9 +5,10 @@
 }
 
 body {
-    background: linear-gradient(135deg, #000000 0%, #4a2121 100%);
-    min-height: 100vh;
-    padding: 100px;
+    background: linear-gradient(270deg, rgb(88, 5, 5), rgb(0, 0, 0));
+    background-size: 600% 600%;
+    padding-top: 100px;
+    animation: gradientFlow 10s ease infinite;
 }
 
 header {
@@ -21,16 +22,6 @@ header {
     height: 80px;
     z-index: 100;
     background-color: rgb(190, 190, 190);
-}
-
-
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    background: linear-gradient(45deg, #667eea, #764ba2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 nav {
@@ -79,6 +70,7 @@ nav {
 
     div {
         display: inline-block;
+        color: #000000;
     }
 
     img {
@@ -108,7 +100,7 @@ nav {
 }
 
 .search-bar {
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
     position: relative;
     animation: fadeInUp 1s ease 0.4s both;
@@ -146,4 +138,19 @@ nav {
         display: none;
         flex: 0;
     }
+}
+
+@media (max-width: 1000px) {
+    .search-bar{
+        display: none;
+    }
+}
+
+@keyframes gradientFlow {
+    0% {background-position: 0% 50%;}
+    25% {background-position: 50% 100%;}
+    50% {background-position: 100% 50%;}
+    75% {background-position: 50% 0%;}
+    100% {background-position: 0% 50%;}
+
 }
