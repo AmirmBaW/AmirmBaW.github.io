@@ -1,6 +1,15 @@
-body {
-    margin-top: 80px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    background: linear-gradient(135deg, #000000 0%, #4a2121 100%);
+    min-height: 100vh;
+    padding: 100px;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -11,45 +20,75 @@ header {
     right: 0;
     height: 80px;
     z-index: 100;
-    background-color: rgba(211, 47, 47, 0.5);
+    background-color: rgb(190, 190, 190);
 }
 
-.left-header,
-.right-header {
-    flex: 1;
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.nav-hooks {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-hooks a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-hooks a:hover {
+    color: #667eea;
+    transform: translateY(-2px);
 }
 
 .left-header {
-    justify-content: flex-start;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     padding-left: 20px;
+}
+
+.right-header {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-right: 20px; 
+
+    div {
+        display: inline-block;
+    }
+
+    img {
+        vertical-align: middle;
+    }
 }
 
 .middle-header {
     flex: 2;
     margin: 5% 5%;
-}
-
-nav ul {
-    display: flex;
-    list-style: none; 
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    border-radius: 8px;
-    background-color: rgba(121, 121, 121, 0.432);
-}
-
-nav ul li {
-    font-weight: bold;
-    padding: 20px 10px;
-    transition: background-color 0.2s, color 0.2s;
-}
-
-nav ul li a {
-    color: white;
-    transition: color 0.2s;
 }
 
 .right-header img {
@@ -68,8 +107,43 @@ nav ul li a {
     transition: background-color 0.2s;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+.search-bar {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    animation: fadeInUp 1s ease 0.4s both;
 }
 
+.search-bar input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-btn {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 795px) {
+    .middle-header{
+        display: none;
+        flex: 0;
+    }
+}
