@@ -5,20 +5,33 @@ function renderPosts(renderPosts) {
     renderPosts.forEach((post) => {
         html += 
         `
-            <div class="post">
-                <div class="post-photo"> 
-                    <img src=${post.image} />
+        <div class="product-card">
+            <div class="product-image">
+                <img src=${post.image}>
+                <div class="image-overlay"></div>
+            </div>
+        
+            <div class="product-title">
+                <h3>${post.title}</h3>
+            </div>
+            
+            <div class="author-info">
+                <div class="author-avatar">
+                <img src=${post.authorImage}>
                 </div>
-                <div class="post-info">
-                    <div class="post-title"> ${post.title} </div>
-                </div>
-                <div class="post-about">
-                    <img src="${post.authorImage}" class="post-author">
-                    <div>${post.author}</div>
-                    <div>${post.date}</div>
+                <div class="author-details">
+                    <span class="author-name">${post.author}</span>
+                    <span class="publish-date">${post.date}</span>
                 </div>
             </div>
+        
         `
+
+        if (post.badge) {
+            html += `<div class="product-badge">${post.badge}</div>`
+        }
+
+        html += "</div>"
     })
 
     document.querySelector('.blog').innerHTML = html;
