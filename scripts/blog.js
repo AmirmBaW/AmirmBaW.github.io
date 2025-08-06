@@ -8,7 +8,6 @@ function renderPosts(renderPosts) {
         <div class="product-card">
             <div class="product-image">
                 <img src=${post.image}>
-                <div class="image-overlay"></div>
             </div>
         
             <div class="product-title">

@@ -1,14 +1,14 @@
 export const posts = [
 {
-    title: "فراستی قسمت اول",
+    title:"فراستی قسمت اول (در جستجوی خانواده حقیقی)",
     author: "سینا",
     image: "../images/blog/posts/fer2.jpg",
     authorImage: "../images/blog/authors/roshan.jpg",
     date: "12 اردیبهشت",
-    badge: "جدید"
+    badge: "جالب"
 },
 {
-    title: "فراستی قسمت دوم",
+    title: "فراستی قسمت دوم (در جستجوی زندگی بهتر در پس پرده سینما، روایتی دروغین)",
     author: "امیر",
     authorImage: "../images/blog/authors/roshan.jpg",
     image: "../images/blog/posts/ferasati.jpg",
@@ -17,11 +17,11 @@ export const posts = [
 },
 
 {
-    title: "فراستی قسمت سوم",
+    title: "فراستی قسمت سوم (ایده های نام گذاری تمام شد، گویی فقط سعی دارم تا خط سوم رو نیز پر کنم تا ببینم چه اتفاقی برای این کارت می افتد)",
     author: "ناشناس",
     authorImage: "../images/blog/authors/ghafi.jpg",
     image: "../images/blog/posts/fer3.jpg",
     date: "۱۹ خرداد",
-    badge: "جالب"
+    badge: "جدید"
 }
 ]
