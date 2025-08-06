@@ -1,6 +1,6 @@
 export const posts = [
 {
-    title:"فراستی قسمت اول (در جستجوی خانواده حقیقی)",
+    title:"فراستی قسمت اول (در جستجوی راز موفقیت)",
     author: "سینا",
     image: "../images/blog/posts/fer2.jpg",
     authorImage: "../images/blog/authors/roshan.jpg",
