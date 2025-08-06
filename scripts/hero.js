@@ -44,15 +44,14 @@ class floatingElement {
 
     registerListeners() {
         this.floating.addEventListener('click', (e) => {
-        const actualPos = this.getActualPosition();
 
-        this.createBlood();
+        this.createBlood(0, 0);
         const additionalDrops = 1 + Math.floor(Math.random() * 3);
         for (let i = 0; i < additionalDrops; i++) {
             setTimeout(() => {
-                const offsetX = (Math.random() * 40) - 20;
-                const offsetY = (Math.random() * 40) - 20;
-                this.createBlood();
+                const offsetX = (Math.random() / 2) + 0.25;
+                const offsetY = (Math.random() / 2) + 0.25;
+                this.createBlood(offsetX, offsetY);
             }, Math.random() * 200);
         }
             this.floating.remove();
@@ -69,7 +68,7 @@ class floatingElement {
         });
     }
 
-    createBlood() {
+    createBlood(offsetX, offsetY) {
         const bloodDrop = document.createElement('div');
         bloodDrop.className = 'blood-drop';
         
@@ -82,8 +81,8 @@ class floatingElement {
         
         bloodDrop.style.setProperty('--rotation', `${rotation}deg`);
         bloodDrop.style.setProperty('--scale', scale);
-        bloodDrop.style.left = `${this.left}%`; 
-        bloodDrop.style.top = `${this.top}%`;
+        bloodDrop.style.left = `${this.left + offsetX}%`; 
+        bloodDrop.style.top = `${this.top + offsetY}%`;
         
         this.container.appendChild(bloodDrop);
         
