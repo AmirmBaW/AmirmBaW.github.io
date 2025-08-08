@@ -1,7 +1,7 @@
 import {posts} from "../data/posts.js";
 
 function renderPosts(renderPosts) {
-    let html = '';
+    let html = '<div class="blog-title">وبلاگ</div>';
     renderPosts.forEach((post) => {
         html += 
         `
@@ -32,7 +32,7 @@ function renderPosts(renderPosts) {
         html += "</div>"
     })
 
-    document.querySelector('.blog').innerHTML += html;
+    document.querySelector('.blog').innerHTML = html;
 }
 
 function searchProducts() {
