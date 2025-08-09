@@ -1,4 +1,4 @@
-import {posts} from "../data/posts.js";
+import {posts} from "../../data/posts.js";
 
 function renderPosts(renderPosts) {
     let html = '<div class="blog-title">وبلاگ</div>';

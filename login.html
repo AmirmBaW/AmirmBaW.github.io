@@ -1,26 +1,72 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-    <!-- <html lang="fa" dir="rtl" data-theme="dark" style="color-scheme: dark;"></html> -->
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitty Food</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <title>سینمای غرب وحشی - ورود</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/login/login.css"/>
 </head>
 <body>
-    <div class="login-body">
-            <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+    <!-- Desert Background -->
+    <div class="desert"></div>
 
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-
-        <button type="submit">Login</button>
-        <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-
+    <!-- Sun -->
+    <div class="sun"></div>
+    
+    <!-- Clouds -->
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    
+    <!-- Cacti -->
+    <div class="cactus"></div>
+    <div class="cactus"></div>
+    <div class="cactus"></div>
+    
+    <!-- Bullet holes for western effect -->
+    <div class="bullet-hole"></div>
+    <div class="bullet-hole"></div>
+    <div class="bullet-hole"></div>
+    
+    <!-- Tumbleweed animation -->
+    <div class="tumbleweed"></div>
+    
+    <!-- Main login container -->
+    <div class="login-container">
+        <div class="logo">
+            <img src="images/navbar/piclogo.png">
+            <h1>Vive Le Cinema</h1>
+            <p>جایی که هر فیلم یک گنج است</p>
+        </div>
+        
+        <form class="login-form">
+            <div class="input-group">
+                <input type="text" placeholder="نام کاربری" required>
+                <i class="fas fa-user input-icon"></i>
+            </div>
+            
+            <div class="input-group">
+                <input type="password" placeholder="رمز عبور" required>
+                <i class="fas fa-lock input-icon"></i>
+            </div>
+            
+            <div class="options">
+                <label>
+                    <input type="checkbox"> مرا به خاطر بسپار
+                </label>
+                <a href="#">رمز عبور را فراموش کرده‌اید؟</a>
+            </div>
+            
+            <button type="submit" class="login-btn">
+                <span>ورود به سینما</span>
+                <i class="fas fa-hat-cowboy"></i>
+            </button>
+            
+            <p class="signup-link">کاربر جدید هستید؟ <a href="#">ثبت نام کنید</a></p>
+        </form>
     </div>
     
-
+    <script src="scripts/login/login.js"></script>
 </body>
 </html>
