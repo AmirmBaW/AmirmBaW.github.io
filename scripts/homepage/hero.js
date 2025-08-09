@@ -39,7 +39,7 @@ class floatingElement {
         this.floating.style.fontSize = `${size}rem`;
         this.floating.style.opacity = Math.random() * 0.5 + 0.4;
         this.floating.style.color = this.color;
-        this.floating.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+        this.floating.style.animation = `float ${duration}s ease-in-out ${delay}s alternate infinite`;
     }
 
     registerListeners() {
@@ -76,10 +76,8 @@ class floatingElement {
         const type = types[Math.floor(Math.random() * types.length)];
         if (type) bloodDrop.classList.add(type);
         
-        const rotation = Math.random() * 360;
         const scale = 0.7 + Math.random() * 0.6; 
         
-        bloodDrop.style.setProperty('--rotation', `${rotation}deg`);
         bloodDrop.style.setProperty('--scale', scale);
         bloodDrop.style.left = `${this.left + offsetX}%`; 
         bloodDrop.style.top = `${this.top + offsetY}%`;
@@ -100,12 +98,12 @@ for(let i = 0; i < 25; i++) {
 
 // افکت سوراخ‌های نوار فیلم
 const hero = document.querySelector('.hero');
-for(let i = 0; i < 20; i++) {
+for(let i = 0; i < 2; i++) {
     const hole = document.createElement('div');
     hole.className = 'film-hole';
     hole.style.left = `${Math.random() * 100}%`;
     hole.style.top = `${Math.random() * 100}%`;
-    hole.style.animationDelay = `${Math.random() * 5}s`;
+    hole.style.animationDelay = `${Math.random() * 2}s`;
     hero.appendChild(hole);
 }
 
