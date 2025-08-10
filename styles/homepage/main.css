@@ -154,7 +154,7 @@ nav {
   bottom: 0;
   background-image: url('../../images/strips.png');
   background-repeat: repeat-y;
-  background-size: contain; /* تصویر را متناسب نگه دارید */
+  background-size: contain; 
 }
 
 .film-strip-left {

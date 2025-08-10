@@ -204,7 +204,7 @@
     }
 
     .film-strip-left, .film-strip-right {
-        width: 60px;
+        display: none;
     }
 }
 

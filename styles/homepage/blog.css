@@ -43,7 +43,7 @@
 }
 
 .film-card:hover {
-    transform: rotateY(5deg) rotateX(-3deg) translateZ(30px) scale(1.05);
+    transform: rotateY(4deg) rotateX(-2deg) translateZ(1.rem) scale(1.05);
 }
 
 .card-glow {
@@ -71,13 +71,12 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(145deg, #2a1810, #1e120c);
-    border-radius: 15px;
     border: 2px solid rgba(218, 165, 32, 0.3);
     overflow: hidden;
     position: relative;
     box-shadow: 
-        inset 0 4px 8px rgba(218, 165, 32, 0.1),
-        0 15px 35px rgba(0, 0, 0, 0.8);
+        inset 0 0.2rem 0.4rem rgba(218, 165, 32, 0.1),
+        0 1.5rem 35px rgba(0, 0, 0, 0.8);
 }
 
 .film-card:hover .card-inner::before {
@@ -95,12 +94,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    transform: perspective(1000px);
     transition: transform 0.6s ease;
-}
-
-.film-card:hover .poster-frame {
-    transform: perspective(1000px) rotateY(5deg);
 }
 
 .poster-image {
@@ -131,7 +125,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 15px;
+    padding: 0.6rem;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
@@ -144,11 +138,11 @@
     align-self: flex-start;
     background: rgb(218, 165, 32);
     color: #1a0f0a;
-    padding: 5px 14px;
-    border-radius: 15px;
-    font-size: 16px;
+    padding: 0.2rem 0.8rem;
+    border-radius: 30%;
+    font-size: 2rem;
     font-weight: 400;
-    transform: translateY(-20px);
+    transform: translateY(-1rem);
     transition: transform 0.3s ease 0.2s;
 }
 
@@ -158,8 +152,8 @@
 
 .play-button {
     align-self: center;
-    width: 60px;
-    height: 60px;
+    width: 3rem;
+    height: 3rem;
     background: rgba(218, 165, 32, 0.9);
     border-radius: 50%;
     display: flex;
@@ -168,7 +162,7 @@
     transform: scale(0) rotate(180deg);
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s;
     cursor: pointer;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0.3rem 1.2rem rgba(0, 0, 0, 0.4);
 }
 
 .film-card:hover .play-button {
@@ -178,22 +172,22 @@
 .play-button:hover {
     transform: scale(1.1) rotate(0deg);
     background: rgba(218, 165, 32, 1);
-    box-shadow: 0 12px 35px rgba(218, 165, 32, 0.4);
+    box-shadow: 0 0.7rem 1.8rem rgba(218, 165, 32, 0.4);
 }
 
 .play-icon {
     width: 0;
     height: 0;
-    border-left: 18px solid #1a0f0a;
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent;
-    margin-left: 4px;
+    border-left: 0.9rem solid #1a0f0a;
+    border-top: 0.6rem solid transparent;
+    border-bottom: 0.6rem solid transparent;
+    margin-left: 0.2rem;
 }
 
 /* Card Content */
 .card-content {
     height: 35%;
-    padding: 20px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -203,12 +197,12 @@
 
 .film-title {
     font-family: 'Cinzel', serif;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 600;
     color: #DAA520;
     margin-bottom: 8px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    transform: translateY(10px);
+    text-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.7);
+    transform: translateY(0.5rem);
     opacity: 0.8;
     transition: all 0.4s ease 0.1s;
 }
@@ -221,9 +215,9 @@
 .author-section {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-    transform: translateX(-20px);
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+    transform: translateX(-1rem);
     opacity: 0;
     transition: all 0.4s ease 0.2s;
 }
@@ -234,8 +228,8 @@
 }
 
 .author-avatar {
-    width: 32px;
-    height: 32px;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid rgba(218, 165, 32, 0.6);
@@ -244,7 +238,7 @@
 
 .author-avatar:hover {
     border-color: #DAA520;
-    transform: scale(1.3);
+    transform: scale(1.1);
 }
 
 .avatar-image {
@@ -254,7 +248,7 @@
 }
 
 .author-name {
-    font-size: 14px;
+    font-size: 0.7rem;
     color: #CD853F;
     font-weight: 500;
 }
@@ -262,18 +256,18 @@
 .show-more-btn {
     background: linear-gradient(135deg, rgba(218, 165, 32, 0.2), rgba(139, 69, 19, 0.3));
     border: 1px solid rgba(218, 165, 32, 0.5);
-    border-radius: 8px;
-    padding: 8px 16px;
+    border-radius: 0.4rem;
+    padding: 0.4rem 0.8rem;
     color: #DAA520;
-    font-size: 13px;
+    font-size: 0.7rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    transform: translateY(20px);
+    gap: 0.4rem;
+    transform: translateY(1rem);
     opacity: 0;
     transition: all 0.4s ease 0.4s;
 }
@@ -287,7 +281,7 @@
     background: linear-gradient(135deg, rgba(218, 165, 32, 0.4), rgba(139, 69, 19, 0.5));
     border-color: #DAA520;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(218, 165, 32, 0.3);
+    box-shadow: 0 0.3rem 0.7rem rgba(218, 165, 32, 0.3);
 }
 
 .show-more-btn svg {
@@ -324,42 +318,42 @@
 
 .corner {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 1rem;
+    height: 1rem;
     border: 2px solid rgba(218, 165, 32, 0.6);
     transition: all 0.4s ease;
 }
 
 .corner.top-left {
-    top: 10px;
-    left: 10px;
+    top: 0.5rem;
+    left: 0.5rem;
     border-right: none;
     border-bottom: none;
-    transform: translate(-10px, -10px);
+    transform: translate(-0.5rem, -0.5rem);
 }
 
 .corner.top-right {
-    top: 10px;
-    right: 10px;
+    top: 0.5rem;
+    right: 0.5rem;
     border-left: none;
     border-bottom: none;
-    transform: translate(10px, -10px);
+    transform: translate(0.5rem, -0.5rem);
 }
 
 .corner.bottom-left {
-    bottom: 10px;
-    left: 10px;
+    bottom: 0.5rem;
+    left: 0.5rem;
     border-right: none;
     border-top: none;
-    transform: translate(-10px, 10px);
+    transform: translate(-0.5rem, 0.5rem);
 }
 
 .corner.bottom-right {
-    bottom: 10px;
-    right: 10px;
+    bottom: 0.5rem;
+    right: 0.5rem;
     border-left: none;
     border-top: none;
-    transform: translate(10px, 10px);
+    transform: translate(0.5rem, 0.5rem);
 }
 
 .film-card:hover .corner {
@@ -376,4 +370,22 @@
 @keyframes pulseGlow {
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+@media (max-width: 992px) {
+    .cinema-container {
+      font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cinema-container {
+      font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cinema-container {
+      font-size: 0.3rem;
+    }
 }
