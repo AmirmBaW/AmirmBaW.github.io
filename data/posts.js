@@ -23,5 +23,14 @@ export const posts = [
     image: "../images/blog/posts/fer3.jpg",
     date: "۱۹ خرداد",
     badge: "جدید"
+},
+{
+    title:"title here",
+    author: "author name here",
+    image: "../images/blog/posts/fer2.jpg",
+    authorImage: "../images/blog/authors/roshan.jpg",
+    date: "date here",
+    badge: "badge here"
 }
+
 ]

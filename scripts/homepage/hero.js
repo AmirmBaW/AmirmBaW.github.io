@@ -29,7 +29,7 @@ class floatingElement {
         this.top = Math.random() * 90 + 5;
         this.color = colors[Math.floor(Math.random() * colors.length)];
 
-        const duration = Math.random() * 10 + 8;
+        const duration = Math.random() * 20 + 9;
         const delay = Math.random() * 5;
         const size = Math.random() * 1.5 + 1;
         

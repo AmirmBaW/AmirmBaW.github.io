@@ -1,5 +1,10 @@
 body {
     padding-top: 80px;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tanha', sans-serif;
 }
 
 header {
@@ -132,6 +137,44 @@ nav {
     color: white;
     font-size: 1.2rem;
     cursor: pointer;
+}
+
+.seprator {
+  background-color: white;
+  height: 3rem;
+  z-index: 5;
+}
+
+.film-strip-left, .film-strip-right {
+  position: fixed;
+  opacity: 0.7;
+  width: 4rem;
+  z-index: 2;
+  top: 80px;
+  bottom: 0;
+  background-image: url('../../images/strips.png');
+  background-repeat: repeat-y;
+  background-size: contain; /* تصویر را متناسب نگه دارید */
+}
+
+.film-strip-left {
+  left: -10px;
+  animation: filmScrollUp 10s linear infinite;
+}
+
+.film-strip-right {
+  right: -10px;
+  animation: filmScrollDown 10s linear infinite;
+}
+
+@keyframes filmScrollUp {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 -100%; }
+}
+
+@keyframes filmScrollDown {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100%; }
 }
 
 @media (max-width: 795px) {
