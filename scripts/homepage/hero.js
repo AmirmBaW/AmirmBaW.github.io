@@ -1,7 +1,7 @@
 const floatingContainer = document.querySelector('.floating-elements');
 const icons = ['fa-film', 'fa-popcorn', 'fa-ticket-alt', 'fa-camera', 'fa-video', 'fa-clapperboard'];
 const colors = ['#ff9f1c', '#ffffff', '#2ec4b6', '#ff3366'];
-
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 class floatingElement {
     floating;
     container;
