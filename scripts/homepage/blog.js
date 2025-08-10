@@ -5,9 +5,7 @@ function renderPosts(renderPosts) {
     renderPosts.forEach((post) => {
         html += 
         `
-        <div class="film-card">
-            <div class="card-glow"></div>
-            
+        <div class="film-card">            
             <div class="card-inner">
                 <div class="poster-section">
                     <div class="poster-frame">

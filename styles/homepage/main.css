@@ -1,6 +1,7 @@
 body {
     padding-top: 80px;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Tanha', sans-serif;
 }
@@ -24,7 +25,7 @@ nav {
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
-    margin: 0 20px;
+    padding: 0 20px;
 }
 
 
@@ -52,6 +53,8 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    margin-left: 1rem;
+    font-size: 1.2rem;
 
     img {
         margin-right: 10px;
@@ -63,6 +66,8 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    margin-right: 1rem; 
+    font-size: 1.2rem;
 
     div {
         display: inline-block;

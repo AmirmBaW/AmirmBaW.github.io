@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
     background: radial-gradient(ellipse at center, #dad2d0 0%, #413631 70%, #241816 100%);
+    padding: 1rem 3.2rem;
 }
 
 /* Animated Background */
