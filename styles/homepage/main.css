@@ -1,7 +1,5 @@
 body {
-    padding-top: 80px;
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Tanha', sans-serif;
 }
@@ -11,41 +9,64 @@ header {
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    top: 0;
+    height: 7rem;
+    z-index: 2;
+    top: 0.8rem;
+    width: 95%;
+    left: 2.5%;
+    right: 2.5%;
+    border-radius: 3.5rem;
+    background: linear-gradient( to right,
+       rgb(114, 0, 0) 0%,
+        rgb(85, 0, 110) 100%
+    );
+
+    transition: all ease 0.2s;
+    padding: 0 0.7%;
+}
+
+.round {
+    width: 100%;
     left: 0;
     right: 0;
-    height: 80px;
-    z-index: 100;
-    background-color: rgb(190, 190, 190);
+    top: 0;
+    padding: 0 3.2%;
+    border-radius: 0;
+
+    background: linear-gradient(to right,
+        rgb(114, 0, 0) 0%,
+        rgb(85, 0, 110) 100%
+    );
 }
 
-nav {
+nav { 
+    flex: 2;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    max-width: 1400px;
+    max-width: 120rem;
     margin: 0 auto;
-    padding: 0 20px;
-}
+    padding: 0 1.3rem;
+    margin: 5% 5%;
 
+}
 
 .nav-hooks {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.6rem;
 }
 
 .nav-hooks a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     font-weight: 500;
     transition: all 0.3s ease;
     position: relative;
 }
 
 .nav-hooks a:hover {
-    color: #667eea;
-    transform: translateY(-2px);
+    color: #8698e9;
 }
 
 .left-header {
@@ -53,11 +74,11 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin-left: 1rem;
     font-size: 1.2rem;
 
     img {
-        margin-right: 10px;
+        margin-right: 0.6rem;
+        height: 3rem;
     }
 }
 
@@ -66,8 +87,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-right: 1rem; 
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 
     div {
         display: inline-block;
@@ -76,20 +96,8 @@ nav {
 
     img {
         vertical-align: middle;
+        height: 4rem;
     }
-}
-
-.middle-header {
-    flex: 2;
-    margin: 5% 5%;
-}
-
-.right-header img {
-    height: 50px;
-}
-
-.left-header img {
-    width: 32px;
 }
 
 .left-header a {
@@ -101,8 +109,7 @@ nav {
 }
 
 .search-bar {
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 40rem;
     position: relative;
     animation: fadeInUp 1s ease 0.4s both;
 }
@@ -111,10 +118,10 @@ nav {
     width: 100%;
     padding: 1rem 3rem 1rem 1rem;
     border: none;
-    border-radius: 50px;
+    border-radius: 3rem;
     font-size: 1.1rem;
     background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(0.8rem);
     color: black;
     transition: background-color 0.5s, box-shadow 1s;
 }
@@ -136,7 +143,7 @@ nav {
     background: none;
     border: none;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     cursor: pointer;
 }
 
@@ -150,8 +157,8 @@ nav {
   position: fixed;
   opacity: 0.7;
   width: 4rem;
-  z-index: 2;
-  top: 80px;
+  z-index: 6;
+  top: 0;
   bottom: 0;
   background-image: url('../../images/strips.png');
   background-repeat: repeat-y;
@@ -159,12 +166,12 @@ nav {
 }
 
 .film-strip-left {
-  left: -10px;
+  left: -0.7rem;
   animation: filmScrollUp 10s linear infinite;
 }
 
 .film-strip-right {
-  right: -10px;
+  right: -0.7rem;
   animation: filmScrollDown 10s linear infinite;
 }
 
@@ -179,7 +186,7 @@ nav {
 }
 
 @media (max-width: 795px) {
-    .middle-header{
+    nav {
         display: none;
         flex: 0;
     }

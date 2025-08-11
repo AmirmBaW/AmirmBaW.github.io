@@ -1,6 +1,9 @@
 const floatingContainer = document.querySelector('.floating-elements');
-const icons = ['fa-film', 'fa-popcorn', 'fa-ticket-alt', 'fa-camera', 'fa-video', 'fa-clapperboard'];
+let floatingClasses = [];
+const icons = ['fa-film', 'fa-ticket-alt', 'fa-camera', 'fa-video', 'fa-clapperboard'];
 const colors = ['#ff9f1c', '#ffffff', '#2ec4b6', '#ff3366'];
+const containerWidth = floatingContainer.offsetWidth;
+const containerHeight = floatingContainer.offsetHeight;
 
 class floatingElement {
     floating;
@@ -17,6 +20,7 @@ class floatingElement {
         this.registerListeners();
 
         container.appendChild(this.floating);
+        floatingClasses.push(this);
     }
 
     registery() {
@@ -43,8 +47,9 @@ class floatingElement {
     }
 
     registerListeners() {
-        this.floating.addEventListener('click', (e) => {
-
+        this.floating.addEventListener('click', () => {
+        
+        this.remove();
         this.createBlood(0, 0);
         const additionalDrops = 1 + Math.floor(Math.random() * 3);
         for (let i = 0; i < additionalDrops; i++) {
@@ -54,8 +59,9 @@ class floatingElement {
                 this.createBlood(offsetX, offsetY);
             }, Math.random() * 200);
         }
-            this.floating.remove();
             new floatingElement(this.container);
+            renderLines();
+
         });
 
         this.floating.addEventListener('mouseenter', () => {
@@ -88,23 +94,45 @@ class floatingElement {
             bloodDrop.remove();
         }, 3000);
     }
+
+    remove() {
+        this.floating.remove();
+        floatingClasses = floatingClasses.filter(element => element !== this);
+    }
 }
 
-
-
-for(let i = 0; i < 25; i++) {
-   new floatingElement(floatingContainer);
+for(let i = 0; i < 17; i++) {
+    new floatingElement(floatingContainer);
 }
 
-// افکت سوراخ‌های نوار فیلم
-const hero = document.querySelector('.hero');
-for(let i = 0; i < 2; i++) {
-    const hole = document.createElement('div');
-    hole.className = 'film-hole';
-    hole.style.left = `${Math.random() * 100}%`;
-    hole.style.top = `${Math.random() * 100}%`;
-    hole.style.animationDelay = `${Math.random() * 2}s`;
-    hero.appendChild(hole);
+// Remove old lines
+function renderLines() {
+    floatingContainer.querySelectorAll('.connection-line').forEach(line => line.remove());
+    console.log(floatingClasses);
+
+    for (let i = 0; i < floatingClasses.length - 1; i++) {
+        const rect1 = floatingClasses[i];
+        const rect2 = floatingClasses[i + 1];
+
+        const x1 = (rect1.left / 100) * containerWidth;
+        const y1 = (rect1.top / 100) * containerHeight;
+
+        const x2 = (rect2.left / 100) * containerWidth;
+        const y2 = (rect2.top / 100) * containerHeight;
+
+        const line = document.createElement('div');
+        line.className = 'connection-line';
+
+        const length = Math.hypot(x2 - x1, y2 - y1);
+        const angle = Math.atan2(y2 - y1, x2 - x1) * (180 / Math.PI);
+
+        line.style.width = `${length + 2}px`;
+        line.style.left = `${(x1 + x2) / 2 - length / 2}px`;
+        line.style.top = `${(y1 + y2) / 2}px`;
+        line.style.transform = `rotate(${angle}deg)`;
+
+        floatingContainer.appendChild(line);
+    }
 }
 
-
+renderLines();
