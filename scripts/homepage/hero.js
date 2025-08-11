@@ -43,7 +43,6 @@ class floatingElement {
         this.floating.style.fontSize = `${size}rem`;
         this.floating.style.opacity = Math.random() * 0.5 + 0.4;
         this.floating.style.color = this.color;
-        this.floating.style.animation = `float ${duration}s ease-in-out ${delay}s alternate infinite`;
     }
 
     registerListeners() {
