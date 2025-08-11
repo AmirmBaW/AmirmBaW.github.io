@@ -29,12 +29,11 @@ class floatingElement {
     }
 
     setStyles() {
-        this.left = Math.random() * 90 + 5;
-        this.top = Math.random() * 90 + 5;
+        this.left = Math.round(Math.random() * 90 + 5);
+        this.top = Math.round(Math.random() * 90 + 5);
         this.color = colors[Math.floor(Math.random() * colors.length)];
 
-        const duration = Math.random() * 20 + 9;
-        const delay = Math.random() * 5;
+        console.log(this.top);
         const size = Math.random() * 1.5 + 1;
         
         this.floating.style.willChange = 'transform'; 
@@ -98,9 +97,10 @@ class floatingElement {
         this.floating.remove();
         floatingClasses = floatingClasses.filter(element => element !== this);
     }
+    
 }
 
-for(let i = 0; i < 17; i++) {
+for(let i = 0; i < 15; i++) {
     new floatingElement(floatingContainer);
 }
 
@@ -123,12 +123,12 @@ function renderLines() {
         line.className = 'connection-line';
 
         const length = Math.hypot(x2 - x1, y2 - y1);
-        const angle = Math.atan2(y2 - y1, x2 - x1) * (180 / Math.PI);
+        const angle = Math.atan2(y2 - y1, x2 - x1);
 
-        line.style.width = `${length + 2}px`;
-        line.style.left = `${(x1 + x2) / 2 - length / 2}px`;
-        line.style.top = `${(y1 + y2) / 2}px`;
-        line.style.transform = `rotate(${angle}deg)`;
+        line.style.width = `${length }px`;
+        line.style.left = `${((x1 + x2) / 2 - length / 2) / containerWidth * 100 + 0.5}%`;
+        line.style.top = `${(y1 + y2) / 2 / containerHeight * 100 + 1.4}%`;
+        line.style.transform = `rotate(${angle}rad)`;
 
         floatingContainer.appendChild(line);
     }
