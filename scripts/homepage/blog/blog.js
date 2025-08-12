@@ -1,4 +1,19 @@
-import {posts} from "../../data/posts.js";
+import {posts} from "../../../../data/posts.js";
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput');
+
+    searchInput.addEventListener('keypress', (event) => {
+    
+        if (event.key === 'Enter') {
+            searchProducts();
+        }
+
+    });
+
+    document.getElementById('searchBtn').addEventListener('click', () => searchProducts());
+})
 
 function renderPosts(renderPosts) {
     let html = `<div class="cinema-title">سینما</div>
@@ -58,18 +73,15 @@ function renderPosts(renderPosts) {
     document.querySelector('.cinema-container').innerHTML = html;
 }
 
+renderPosts(posts);
+
 function searchProducts() {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const searchTerm = searchInput.value.toLowerCase();
     const filteredProducts = posts.filter(post =>
         post.title.toLowerCase().includes(searchTerm)
     );
     renderPosts(filteredProducts);
 }
 
-document.getElementById('searchInput').addEventListener('keypress', (event) => {
-    if (event.key === 'Enter') {
-        searchProducts();
-    }
-});
 
-renderPosts(posts);
+

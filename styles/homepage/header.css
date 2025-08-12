@@ -25,7 +25,7 @@ header {
     padding: 0 0.7%;
 }
 
-.round {
+.scrolled {
     width: 100%;
     left: 0;
     right: 0;
@@ -135,7 +135,7 @@ nav {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.search-btn {
+#searchBtn {
     position: absolute;
     left: 1rem;
     top: 50%;

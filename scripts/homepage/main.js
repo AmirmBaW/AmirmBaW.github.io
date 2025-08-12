@@ -2,8 +2,8 @@ const header = document.querySelector('.js-header');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 0) {
-    header.classList.add('round');
+    header.classList.add('scrolled');
   } else {
-    header.classList.remove('round');
+    header.classList.remove('scrolled');
   }
 });

@@ -1,4 +1,5 @@
 const floatingContainer = document.querySelector('.floating-elements');
+const hero = document.querySelector('.hero');
 const icons = ['fa-film', 'fa-ticket-alt', 'fa-camera', 'fa-video', 'fa-clapperboard'];
 const colors = ['#ff9f1c', '#ffffff', '#2ec4b6', '#ff3366'];
 
@@ -49,11 +50,11 @@ class floatingElement {
         this.floating.addEventListener('click', () => {
             this.remove();
             this.createBlood(0, 0);
-            const additionalDrops = 1 + Math.floor(Math.random() * 5);
+            const additionalDrops = 1 + Math.floor(Math.random() * 4);
             for (let i = 0; i < additionalDrops; i++) {
                 setTimeout(() => {
-                    const offsetX = (Math.random() / 2) + 0.25;
-                    const offsetY = (Math.random() / 2) + 0.25;
+                    const offsetX = (Math.random() / 1.2) + 0.25;
+                    const offsetY = (Math.random() / 1.2) + 0.25;
                     this.createBlood(offsetX, offsetY);
                 }, Math.random() * 200);
             }
@@ -112,9 +113,6 @@ class floatingElement {
 
     
     innerAnger() {
-        this.floating.style.filter = "drop-shadow(0px 0px 10px rgba(229, 0, 0, 1))";
-
-        setTimeout(() => this.floating.style.filter = '', 1500);
     }
 }
 
