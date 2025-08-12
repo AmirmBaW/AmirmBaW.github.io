@@ -1,7 +1,9 @@
 import {posts} from "../../data/posts.js";
 
 function renderPosts(renderPosts) {
-    let html = '<div class="cinema-title">سینما</div>';
+    let html = `<div class="cinema-title">سینما</div>
+        <canvas id="beamCanvas"></canvas>
+    `
     renderPosts.forEach((post) => {
         html += 
         `
@@ -58,7 +60,6 @@ function renderPosts(renderPosts) {
 
 function searchProducts() {
     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    console.log(searchTerm);
     const filteredProducts = posts.filter(post =>
         post.title.toLowerCase().includes(searchTerm)
     );

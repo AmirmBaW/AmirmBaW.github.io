@@ -10,7 +10,7 @@ header {
     justify-content: space-between;
     position: fixed;
     height: 7rem;
-    z-index: 2;
+    z-index: 100;
     top: 0.8rem;
     width: 95%;
     left: 2.5%;
