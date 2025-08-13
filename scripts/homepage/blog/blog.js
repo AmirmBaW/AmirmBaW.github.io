@@ -16,9 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function renderPosts(renderPosts) {
-    let html = `<div class="cinema-title">سینما</div>
-        <canvas id="beamCanvas"></canvas>
-    `
+    let html = ''
     renderPosts.forEach((post) => {
         html += 
         `
@@ -70,7 +68,7 @@ function renderPosts(renderPosts) {
         `
     })
 
-    document.querySelector('.cinema-container').innerHTML = html;
+    document.querySelector('.cinema-posts').innerHTML = html;
 }
 
 renderPosts(posts);

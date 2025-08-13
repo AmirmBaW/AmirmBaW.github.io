@@ -47,7 +47,32 @@ export const posts = [
     authorImage: "../images/blog/authors/roshan.jpg",
     date: "date ",
     badge: "badge"
+},
+{
+    title:"قسمت چهارم",
+    author: "author",
+    image: "../images/blog/posts/fer2.jpg",
+    authorImage: "../images/blog/authors/roshan.jpg",
+    date: "date ",
+    badge: "badge"
+},
+{
+    title:"قسمت پنجم",
+    author: "author",
+    image: "../images/blog/posts/fer2.jpg",
+    authorImage: "../images/blog/authors/roshan.jpg",
+    date: "date ",
+    badge: "badge"
+},
+{
+    title:"قسمت ششم",
+    author: "author",
+    image: "../images/blog/posts/fer2.jpg",
+    authorImage: "../images/blog/authors/roshan.jpg",
+    date: "date ",
+    badge: "badge"
 }
+
 
 
 ]

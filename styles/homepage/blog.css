@@ -8,6 +8,11 @@
 }
 
 .cinema-container {
+    background: radial-gradient(ellipse at center, #dad2d0 0%, #413631 70%, #241816 100%);
+    position: relative;
+}
+
+.cinema-posts {
     font-family: 'Crimson Text', serif;
     position: relative;
     width: 100%;
@@ -15,17 +20,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(ellipse at center, #dad2d0 0%, #413631 70%, #241816 100%);
     padding: 1rem 3.5rem;
-}
-
-/* Animated Background */
-.animated-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 1;
 }
 
 .film-card {
@@ -364,7 +359,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  pointer-events: none; /* so canvas does not block clicks */
+  pointer-events: none;
   width: 100%;
   height: 100%;
   z-index: 10;

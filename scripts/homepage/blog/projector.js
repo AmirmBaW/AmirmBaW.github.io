@@ -41,14 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let endY = beamStart.y + (dy / dist) * beamLength;
 
     let intensity = 1 - beamLength / maxBeamLength;
-    intensity = Math.max(intensity, 0.1);
+    intensity = Math.max(intensity, 0.15);
 
     let perpX = -dy / dist;
     let perpY = dx / dist;
 
     const grad = ctx.createLinearGradient(beamStart.x, beamStart.y, endX, endY);
-    grad.addColorStop(0, `rgba(255, 255, 200, ${intensity})`);
-    grad.addColorStop(1, 'rgba(255, 255, 200, 0)');
+    grad.addColorStop(0, `rgba(255, 255, 200, 0.9)`);
+    grad.addColorStop(0.25, `rgba(255, 255, 200, ${intensity + 0.17})`);
+    grad.addColorStop(0.5, `rgba(255, 255, 200, ${intensity})`);
+    grad.addColorStop(0.75, `rgba(255, 255, 200, ${intensity - 0.13})`);
+    grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
 
     ctx.fillStyle = grad;
 
